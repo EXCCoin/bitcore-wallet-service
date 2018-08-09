@@ -1,7 +1,7 @@
 
 # bitcore-wallet-service
 
-Decred fork
+ExchangeCoin fork (based on Decred fork)
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-wallet-service.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-wallet-service)
 [![Build Status](https://img.shields.io/travis/bitpay/bitcore-wallet-service.svg?branch=master&style=flat-square)](https://travis-ci.org/bitpay/bitcore-wallet-service)
@@ -148,7 +148,7 @@ Returns:
 `/v1/txproposals/`: Add a new transaction proposal
 Required Arguments:
  * toAddress: RCPT Bitcoin address.
- * amount: amount (in atoms) of the mount proposed to be transfered
+ * amount: amount (in exels) of the mount proposed to be transfered
  * proposalsSignature: Signature of the proposal by the creator peer, using prososalSigningKey.
  * (opt) message: Encrypted private message to peers.
  * (opt) payProUrl: Paypro URL for peers to verify TX

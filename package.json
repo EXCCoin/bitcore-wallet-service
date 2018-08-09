@@ -2,25 +2,27 @@
   "name": "bitcore-wallet-service",
   "description": "A service for Mutisig HD Bitcoin Wallets",
   "author": "BitPay Inc",
-  "version": "1.9.0-decred",
+  "version": "1.9.0-exchangecoin",
   "keywords": [
     "bitcoin",
     "copay",
     "multisig",
     "wallet",
     "bitcore",
-    "BWS"
+    "BWS",
+    "exchangecoin",
+    "excc"
   ],
   "repository": {
-    "url": "git@github.com:decred/bitcore-wallet-service.git",
+    "url": "git@github.com:EXCCoin/bitcore-wallet-service.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/decred/bitcore-wallet-service/issues"
+    "url": "https://github.com/EXCCoin/bitcore-wallet-service/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore-lib": "git://github.com/decred/bitcore.git#master-new",
+    "bitcore-lib": "git@github.com:EXCCoin/bitcore.git#exchangecoin-new",
     "crypto-browserify": "git://github.com/decred/crypto-browserify.git#master-legacy",
     "body-parser": "^1.11.0",
     "coveralls": "^2.11.2",
@@ -72,14 +74,18 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "bitcoreNode": "./bitcorenode",
-  "contributors": [{
-    "name": "Braydon Fuller",
-    "email": "braydon@bitpay.com"
-  }, {
-    "name": "Ivan Socolsky",
-    "email": "ivan@bitpay.com"
-  }, {
-    "name": "Matias Alejo Garcia",
-    "email": "ematiu@gmail.com"
-  }]
+  "contributors": [
+    {
+      "name": "Braydon Fuller",
+      "email": "braydon@bitpay.com"
+    },
+    {
+      "name": "Ivan Socolsky",
+      "email": "ivan@bitpay.com"
+    },
+    {
+      "name": "Matias Alejo Garcia",
+      "email": "ematiu@gmail.com"
+    }
+  ]
 }

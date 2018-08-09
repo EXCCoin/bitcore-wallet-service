@@ -1,4 +1,4 @@
-var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/bws';
+var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/bws';
 
 var config = {
   basePath: '/bws/api',
@@ -38,13 +38,13 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    dcrdlivenet: {
+    exccdlivenet: {
       provider: 'insight',
       url: 'http://127.0.0.1:3003',
     },
-    dcrdtestnet: {
+    exccdtestnet: {
       provider: 'insight',
-      url: 'http://insight:3004',
+      url: 'http://127.0.0.1:3004'
       // url: 'http://localhost:3001',
       // Multiple servers (in priority order)
       // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
@@ -53,13 +53,14 @@ var config = {
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'dcr',
+    defaultUnit: 'excc',
     subjectPrefix: '',
     pushServerUrl: 'http://localhost:8000',
   },
   fiatRateServiceOpts: {
-    defaultProvider: 'coinmarketcap',
+    defaultProvider: 'coinlib',
     fetchInterval: 15, // in minutes
+    apiKey: ''
   },
   // To use email notifications uncomment this:
   // emailOpts: {
@@ -70,7 +71,7 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'dcr',
+  //  defaultUnit: 'excc',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',
