@@ -1,7 +1,7 @@
 #DOCKER_IMAGE_TAG=decred/bws
 FROM ubuntu:trusty
 
-LABEL description="BWS (Decred fork)"
+LABEL description="BWS (EXCC fork)"
 LABEL version="1.0"
 LABEL maintainer "peter@prioritylane.com"
 
